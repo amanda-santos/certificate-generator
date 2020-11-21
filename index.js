@@ -20,24 +20,26 @@ app.post("/certificado", async (request, response) => {
             return response.data;
         });
 
-    const handlebarsTemplate = handlebars.compile(htmlTemplate);
-    const certificate = handlebarsTemplate({ name, course, organization, dateConclusion, hours });
+        return response.send(htmlTemplate);
 
-    const browser = await puppeteer.launch({ headless: true });
-    const page = await browser.newPage();
-    await page.setContent(certificate);
+    // const handlebarsTemplate = handlebars.compile(htmlTemplate);
+    // const certificate = handlebarsTemplate({ name, course, organization, dateConclusion, hours });
 
-    const pdf = await page.pdf({
-        format: "A4",
-        landscape: true,
-        printBackground: true
-    });
+    // const browser = await puppeteer.launch({ headless: true });
+    // const page = await browser.newPage();
+    // await page.setContent(certificate);
 
-    await browser.close();
+    // const pdf = await page.pdf({
+    //     format: "A4",
+    //     landscape: true,
+    //     printBackground: true
+    // });
 
-    response.header("content-type", "application/pdf; charset=utf-8");
-    response.header("Content-Disposition", `attachment; filename="Certificate_${name}_${course}.pdf"`);
-    return response.send(pdf);
+    // await browser.close();
+
+    // response.header("content-type", "application/pdf; charset=utf-8");
+    // response.header("Content-Disposition", `attachment; filename="Certificate_${name}_${course}.pdf"`);
+    // return response.send(pdf);
 });
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
