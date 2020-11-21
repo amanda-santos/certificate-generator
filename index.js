@@ -20,12 +20,12 @@ app.post("/certificado", async (request, response) => {
             return response.data;
         });
 
-        return response.send(htmlTemplate);
+    const handlebarsTemplate = handlebars.compile(htmlTemplate);
+    const certificate = handlebarsTemplate({ name, course, organization, dateConclusion, hours });
 
-    // const handlebarsTemplate = handlebars.compile(htmlTemplate);
-    // const certificate = handlebarsTemplate({ name, course, organization, dateConclusion, hours });
+    const browser = await puppeteer.launch({ headless: true });
 
-    // const browser = await puppeteer.launch({ headless: true });
+    return response.send('browser');
     // const page = await browser.newPage();
     // await page.setContent(certificate);
 
