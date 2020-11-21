@@ -4,6 +4,8 @@ const handlebars = require('handlebars');
 const puppeteer = require("puppeteer");
 const bodyParser = require('body-parser');
 
+const PORT = process.env.PORT || 5000;
+
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -38,6 +40,4 @@ app.post("/certificado", async (request, response) => {
     return response.send(pdf);
 });
 
-app.listen(process.env.PORT || 8080), () => {
-    console.log("Server running at http://localhost:8080");
-};
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
