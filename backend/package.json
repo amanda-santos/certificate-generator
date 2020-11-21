@@ -1,14 +1,13 @@
 {
-  "name": "backend",
+  "name": "certificate-generator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Amanda",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.0",
@@ -19,5 +18,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
+  },
+  "engines": {
+    "node": "12.18.3"
   }
 }
