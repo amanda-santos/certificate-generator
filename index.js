@@ -23,7 +23,7 @@ app.post("/certificado", async (request, response) => {
     const handlebarsTemplate = handlebars.compile(htmlTemplate);
     const certificate = handlebarsTemplate({ name, course, organization, dateConclusion, hours });
 
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({ headless: true,  args: ["--no-sandbox", "--disable-setuid-sandbox"] });
 
     return response.send('browser');
     // const page = await browser.newPage();
