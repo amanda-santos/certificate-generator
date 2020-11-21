@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificado</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          rgb(18, 40, 130),
+          rgb(84, 52, 142),
+          rgb(130, 64, 155),
+          rgb(173, 77, 167),
+          rgb(215, 91, 180)
+        );
+      }
+
+      *,
+      button,
+      input {
+        border: 0;
+        outline: 0;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .center {
+        color: white;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      p {
+        font-size: 22px;
+      }
+
+      img {
+        margin: 20px;
+      }
+
+      p #bold {
+        color: rgb(255, 145, 0);
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <img src="https://svgshare.com/i/RgN.svg" title="certificate" width="350px"/>
+      <h1>Certificado de Conclusão de Curso</h1>
+      <br />
+      <p>
+        Certificamos que
+        <span id="bold">{{name}}</span> concluiu o curso
+        <span id="bold">{{course}}</span>, oferecido pela
+        <span id="bold">{{organization}}</span>, na data de
+        <span id="bold">{{dateConclusion}}</span>, com carga horária de
+        <span id="bold">{{hours}}</span>.
+      </p>
+    </div>
+  </body>
+</html>
