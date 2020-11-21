@@ -25,21 +25,20 @@ app.post("/certificado", async (request, response) => {
 
     const browser = await puppeteer.launch({ headless: true,  args: ["--no-sandbox", "--disable-setuid-sandbox"] });
 
-    return response.send('browser');
-    // const page = await browser.newPage();
-    // await page.setContent(certificate);
+    const page = await browser.newPage();
+    await page.setContent(certificate);
 
-    // const pdf = await page.pdf({
-    //     format: "A4",
-    //     landscape: true,
-    //     printBackground: true
-    // });
+    const pdf = await page.pdf({
+        format: "A4",
+        landscape: true,
+        printBackground: true
+    });
 
-    // await browser.close();
+    await browser.close();
 
-    // response.header("content-type", "application/pdf; charset=utf-8");
-    // response.header("Content-Disposition", `attachment; filename="Certificate_${name}_${course}.pdf"`);
-    // return response.send(pdf);
+    response.header("content-type", "application/pdf; charset=utf-8");
+    response.header("Content-Disposition", `attachment; filename="Certificate_${name}_${course}.pdf"`);
+    return response.send(pdf);
 });
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
