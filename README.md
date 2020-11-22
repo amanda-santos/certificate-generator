@@ -48,7 +48,7 @@ Technologies that I used to develop this API:
 - HTML5
 - CSS3
 
-## 💻 Getting started
+## ⌨ Getting started
 
 Using [Insomnia](https://insomnia.rest/download/) or [Postman](https://www.postman.com/), insert the following URL: https://certificate-generator-nodejs.herokuapp.com/certificado in an POST requisition.
 Next, insert the following parameters in the body of the requisition:
@@ -65,7 +65,7 @@ Next, insert the following parameters in the body of the requisition:
 }
 ```
 
-## Preview
+## 🖥 Preview
 
 <img src="assets/demo.PNG" />
 
