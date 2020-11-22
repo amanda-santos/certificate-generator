@@ -105,4 +105,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 Made with 💜 by Amanda Santos <br />
-👋 [See my linkedin](https://www.linkedin.com/in/amandasf/)
+👋 [See my LinkedIn](https://www.linkedin.com/in/amandasf/)
