@@ -1,5 +1,6 @@
 <h1 align="center">
-  Certificate Generator
+  <img src="certificate-template/undraw_Graduation_ktn0.svg" width="200px" />
+  <br />Certificate Generator
 </h1>
 
 <p align="center">
@@ -64,7 +65,7 @@ Next, insert the following parameters in the body of the requisition:
 
 ## Preview
 
-<img src="assets/demo.png" />
+<img src="assets/demo.PNG" />
 
 ## 🤔 How to contribute
 
@@ -101,4 +102,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made with 💜 by Amanda Santos 👋 &nbsp;[See my linkedin](https://www.linkedin.com/in/amandasf/)
+Made with 💜 by Amanda Santos <br />
+👋 [See my linkedin](https://www.linkedin.com/in/amandasf/)
