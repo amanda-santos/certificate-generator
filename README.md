@@ -45,6 +45,8 @@ Technologies that I used to develop this API:
 - [Express](https://expressjs.com/pt-br/)
 - [Handlebars](https://handlebarsjs.com/)
 - [Puppeteer](https://pptr.dev/)
+- HTML5
+- CSS3
 
 ## 💻 Getting started
 
